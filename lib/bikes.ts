@@ -20,7 +20,7 @@ export type Bike = {
 export const BRANDS = ['MATRIX', 'Trek', 'Specialized', 'Giant', 'Cannondale']
 
 // Número de WhatsApp de la tienda (formato internacional, sin + ni espacios)
-export const WHATSAPP_NUMBER = '5491122334455'
+export const WHATSAPP_NUMBER = '5493513207202'
 
 export function buildWhatsAppUrl(bike: Bike): string {
   const message = `¡Hola MATRIX! Estoy interesado/a en la bicicleta *${bike.brand} ${bike.name}* (${formatPrice(bike.price)}). ¿Podrían darme más información?`

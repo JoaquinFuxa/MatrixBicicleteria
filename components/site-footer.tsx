@@ -21,7 +21,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <Logo />
+            <Logo className="h-40" />
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
               Bicicletas de alta gama para la ciudad y la montaña. Pasión por el
               ciclismo desde el primer pedaleo.

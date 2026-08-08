@@ -1,15 +1,15 @@
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
+import logoImage from '@/resource/logoMatrix.png'
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <span
-      className={cn(
-        'font-heading text-2xl font-bold tracking-tight select-none',
-        className,
-      )}
-    >
-      <span className="text-foreground">MA</span>
-      <span className="text-primary">TRIX</span>
-    </span>
+    <Image
+      src={logoImage}
+      alt="MATRIX Bicicletería"
+      className={cn('h-30 w-fit max-w-full object-contain object-left select-none', className)}
+      style={{ width: 'auto' }}
+      priority
+    />
   )
 }

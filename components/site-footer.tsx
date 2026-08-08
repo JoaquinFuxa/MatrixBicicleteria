@@ -78,7 +78,7 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-2 text-sm text-muted-foreground">
               <li>Av. del Ciclista 1234</li>
               <li>Buenos Aires, Argentina</li>
-              <li>+54 11 5555-1234</li>
+              <li>+54 3517569237</li>
               <li>hola@matrixbikes.com</li>
             </ul>
           </div>

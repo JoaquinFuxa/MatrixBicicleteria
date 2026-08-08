@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, Inter } from 'next/font/google'
+import tireIcon from '@/resource/tire.png'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -20,6 +21,10 @@ export const metadata: Metadata = {
   description:
     'MATRIX — Bicicletas de alta gama para ciudad y montaña. Explorá nuestro catálogo de bicicletas de montaña, ruta, urbanas y eléctricas.',
   generator: 'v0.app',
+  icons: {
+    icon: tireIcon.src,
+    apple: tireIcon.src,
+  },
 }
 
 export const viewport: Viewport = {

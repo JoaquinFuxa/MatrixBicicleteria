@@ -7,8 +7,11 @@ import { Logo } from '@/components/logo'
 import { cn } from '@/lib/utils'
 
 const NAV_LINKS = [
-  { label: 'Landing', href: '#inicio' },
+  { label: 'Inicio', href: '#inicio' },
   { label: 'Catálogo', href: '#catalogo' },
+  { label: 'Taller', href: '#taller' },
+  { label: 'Repuestos', href: '#repuestos' },
+  { label: 'Reseñas', href: '#reseñas' },
   { label: 'Contacto', href: '#contacto' },
 ]
 

@@ -19,12 +19,13 @@ export type Bike = {
 
 export const BRANDS = ['MATRIX', 'Trek', 'Specialized', 'Giant', 'Cannondale']
 
-// Número de WhatsApp de la tienda (formato internacional, sin + ni espacios)
-export const WHATSAPP_NUMBER = '5493513207202'
+import { buildWhatsAppLink } from '@/lib/site-config'
+
+export { WHATSAPP_NUMBER } from '@/lib/site-config'
 
 export function buildWhatsAppUrl(bike: Bike): string {
   const message = `¡Hola MATRIX! Estoy interesado/a en la bicicleta *${bike.brand} ${bike.name}* (${formatPrice(bike.price)}). ¿Podrían darme más información?`
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  return buildWhatsAppLink(message)
 }
 
 export const INITIAL_BIKES: Bike[] = [

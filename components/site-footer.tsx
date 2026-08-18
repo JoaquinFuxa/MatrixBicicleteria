@@ -1,18 +1,26 @@
 import { Logo } from '@/components/logo'
+import { CONTACT, buildWhatsAppLink } from '@/lib/site-config'
 
 const QUICK_LINKS = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Catálogo', href: '#catalogo' },
+  { label: 'Repuestos', href: '#repuestos' },
+  { label: 'Taller', href: '#taller' },
+  { label: 'Reseñas', href: '#reseñas' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
 const CATEGORY_LINKS = ['Montaña', 'Ruta', 'Urbana', 'Eléctrica']
 
 const SOCIALS = [
-  { name: 'Instagram', src: '/social/instagram.svg' },
-  { name: 'Facebook', src: '/social/facebook.svg' },
-  { name: 'WhatsApp', src: '/social/whatsapp.svg' },
-  { name: 'Strava', src: '/social/strava.svg' },
+  { name: 'Instagram', src: '/social/instagram.svg', href: '#' },
+  { name: 'Facebook', src: '/social/facebook.svg', href: '#' },
+  {
+    name: 'WhatsApp',
+    src: '/social/whatsapp.svg',
+    href: buildWhatsAppLink('¡Hola MATRIX! Quiero hacer una consulta.'),
+  },
+  { name: 'Strava', src: '/social/strava.svg', href: '#' },
 ]
 
 export function SiteFooter() {
@@ -30,7 +38,9 @@ export function SiteFooter() {
               {SOCIALS.map((s) => (
                 <a
                   key={s.name}
-                  href="#"
+                  href={s.href}
+                  target={s.name === 'WhatsApp' ? '_blank' : undefined}
+                  rel={s.name === 'WhatsApp' ? 'noopener noreferrer' : undefined}
                   aria-label={s.name}
                   className="flex size-9 items-center justify-center rounded-lg border border-border bg-card transition-colors hover:border-primary"
                 >
@@ -76,10 +86,10 @@ export function SiteFooter() {
           <div>
             <p className="font-heading text-sm font-semibold">Contacto</p>
             <ul className="mt-4 flex flex-col gap-2 text-sm text-muted-foreground">
-              <li>Av. del Ciclista 1234</li>
-              <li>Buenos Aires, Argentina</li>
-              <li>+54 3517569237</li>
-              <li>hola@matrixbikes.com</li>
+              <li>{CONTACT.address}</li>
+              <li>{CONTACT.city}</li>
+              <li>{CONTACT.phone}</li>
+              <li>{CONTACT.email}</li>
             </ul>
           </div>
         </div>

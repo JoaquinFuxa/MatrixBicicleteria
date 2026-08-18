@@ -52,7 +52,7 @@ export function CatalogHub({
 
   return (
     <div id="catalogo" className="scroll-mt-16 border-b border-border">
-      <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8 lg:pt-24 pb-16">
         <CatalogSelector value={tab} onChange={handleTabChange} />
       </div>
 
